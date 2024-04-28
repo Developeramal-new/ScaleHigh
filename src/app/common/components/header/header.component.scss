@@ -1,0 +1,15 @@
+.show-630{
+    display: none;
+}
+@media (max-width: 630px) {
+    .hide-630 {
+        display: none;
+    }
+    .show-630{
+        display: block;
+    }
+}
+
+.background-primary {
+    background-color: var(--primary) !important; // Set to your primary color or any color you prefer
+  }

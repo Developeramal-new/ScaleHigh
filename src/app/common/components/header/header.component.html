@@ -1,0 +1,95 @@
+<mat-toolbar
+  color="primary"
+  style="min-height: 9vh !important; max-height: 9vh !important"
+>
+  <button class="show-630" mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="show-630" style="margin: auto"></span>
+  <img
+    src="assets/Scalehighlogo.png"
+    width="60"
+    routerLink="/home"
+    style="cursor: pointer"
+  />
+  <button
+    mat-raised-button
+    routerLink="/home"
+    color="primary"
+    routerLinkActive="mat-accent"
+    class="ms-4 hide-630"
+  >
+    Home
+  </button>
+  <button
+    mat-raised-button
+    routerLink="/aboutus"
+    color="primary"
+    routerLinkActive="mat-accent"
+    class="ms-4 hide-630"
+  >
+    About us
+  </button>
+  <span class="hide-630" style="margin: auto"></span>
+  <img
+    class="ms-2 hide-630"
+    src="assets/Youtube.png"
+    alt=""
+    width="45"
+    style="cursor: pointer"
+  />
+  <img
+    class="ms-2 hide-630"
+    src="assets/insta.png"
+    alt=""
+    width="45"
+    style="cursor: pointer"
+  />
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" class="background-primary">
+    <mat-nav-list>
+      <button
+        mat-raised-button
+        routerLink="/home"
+        color="primary"
+        routerLinkActive="mat-accent"
+        class="w-100"
+      >
+        Home
+      </button>
+      <button
+        mat-raised-button
+        routerLink="/aboutus"
+        color="primary"
+        routerLinkActive="mat-accent"
+        class="mt-3 w-100"
+      >
+        About us
+      </button>
+      <div class="mt-3 w-100 text-center">
+        <span
+          ><img
+            class=""
+            src="assets/Youtube.png"
+            alt=""
+            width="45"
+            style="cursor: pointer"
+        /></span>
+        <span
+          ><img
+            class="ms-4"
+            src="assets/insta.png"
+            alt=""
+            width="45"
+            style="cursor: pointer"
+        /></span>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content
+    style="min-height: 91vh !important; max-height: 91vh !important"
+    ><div class="container-fluid"><router-outlet></router-outlet></div
+  ></mat-sidenav-content>
+</mat-sidenav-container>
