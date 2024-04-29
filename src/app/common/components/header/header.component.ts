@@ -4,6 +4,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CommonModules } from '../../commonModules/commonModules.module';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'sh-header',
@@ -16,6 +17,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
+    FooterComponent,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
