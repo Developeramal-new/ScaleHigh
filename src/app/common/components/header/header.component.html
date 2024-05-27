@@ -1,18 +1,32 @@
-<mat-toolbar
-  color="primary"
-  style="min-height: 9vh !important; max-height: 9vh !important"
+<div
+  class="d-flex align-items-center"
+  style="
+    min-height: 8vh !important;
+    max-height: 8vh !important;
+    background-color: var(--primary);
+  "
 >
-  <button class="show-630" mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <span>
+    <button class="show-630" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button></span
+  >
+
   <span class="show-630" style="margin: auto"></span>
-  <img
-    src="assets/Scalehighlogo.png"
-    width="60"
-    routerLink="/home"
-    style="cursor: pointer"
-  />
-  <button
+  <span>
+    <img
+      src="assets/Scalehighlogo.png"
+      width="60"
+      routerLink="/home"
+      style="cursor: pointer"
+  /></span>
+  <div class="tabs ms-4">
+    <span class="tab" routerLink="/home" routerLinkActive="active"> Home </span>
+    <span class="tab" routerLink="/aboutus" routerLinkActive="active">
+      About Us
+    </span>
+  </div>
+  <!-- <button
     mat-raised-button
     routerLink="/home"
     color="primary"
@@ -29,23 +43,25 @@
     class="ms-4 hide-630"
   >
     About us
-  </button>
+  </button> -->
   <span class="hide-630" style="margin: auto"></span>
-  <img
-    class="ms-2 hide-630"
-    src="assets/Youtube.png"
-    alt=""
-    width="45"
-    style="cursor: pointer"
-  />
-  <img
-    class="ms-2 hide-630"
-    src="assets/insta.png"
-    alt=""
-    width="45"
-    style="cursor: pointer"
-  />
-</mat-toolbar>
+  <span class="">
+    <img
+      class="ms-2 hide-630"
+      src="assets/Youtube.png"
+      alt=""
+      width="45"
+      style="cursor: pointer"
+    />
+    <img
+      class="ms-2 hide-630"
+      src="assets/insta.png"
+      alt=""
+      width="45"
+      style="cursor: pointer"
+    />
+  </span>
+</div>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="over" class="background-primary">
@@ -89,8 +105,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content
-    style="min-height: 91vh !important; max-height: 91vh !important"
-    ><div class="container-fluid">
-      <router-outlet></router-outlet><sh-footer></sh-footer></div
+    style="min-height: 92vh !important; max-height: 92vh !important"
+  >
+    <router-outlet></router-outlet><sh-footer></sh-footer
   ></mat-sidenav-content>
 </mat-sidenav-container>

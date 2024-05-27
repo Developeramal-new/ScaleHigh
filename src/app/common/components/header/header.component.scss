@@ -1,15 +1,38 @@
-.show-630{
-    display: none;
+.show-630 {
+  display: none;
 }
 @media (max-width: 630px) {
-    .hide-630 {
-        display: none;
-    }
-    .show-630{
-        display: block;
-    }
+  .hide-630 {
+    display: none;
+  }
+  .show-630 {
+    display: block;
+  }
 }
 
 .background-primary {
-    background-color: var(--primary) !important; // Set to your primary color or any color you prefer
+  background-color: var(
+    --primary
+  ) !important; // Set to your primary color or any color you prefer
+}
+.tabs {
+  .tab {
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    padding: 0.5rem 0.7rem;
+    border-top: 2px solid black;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      border-top: 0px black;
+      background-color: black;
+      border-radius: 20px 10px 20px 10px;
+      transition: background-color 500ms;
+    }
+    &:hover:not(.active) {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 20px 10px 20px 10px;
+    }
   }
+}

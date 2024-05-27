@@ -7,6 +7,6 @@ import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  exports: [MatButtonModule, MatIconModule, MatDividerModule, MatCardModule],
+  exports: [MatButtonModule, MatIconModule, MatDividerModule],
 })
 export class CommonModules {}
